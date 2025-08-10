@@ -70,6 +70,7 @@ h1{
   margin:0;
   font-size:22px;
   letter-spacing:0.2px;
+  color: #fff ;
 }
 .role{
   margin:0;
@@ -129,3 +130,4 @@ p.bio{
   .avatar{ width:140px; height:140px; margin:0 auto; }
   .header{ align-items:center; text-align:center; }
 }
+
