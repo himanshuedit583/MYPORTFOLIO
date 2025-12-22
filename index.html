@@ -1,34 +1,134 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="index.css">
+    <title>HIMANSHU | Creative Editor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #ff3c00; /* Fire Orange for an Epic feel */
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+
+        /* Background Effects */
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a100a 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        /* Hero Section */
+        section { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px 20px; }
+
+        .logo { font-family: 'Syncopate'; font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 50px; color: var(--accent); }
+
+        h1 {
+            font-family: 'Syncopate'; font-size: clamp(2.5rem, 10vw, 6rem);
+            text-align: center; line-height: 1; margin-bottom: 10px;
+        }
+
+        .sub-text { letter-spacing: 5px; color: #888; text-transform: uppercase; margin-bottom: 40px; font-size: 0.9rem; }
+       
+
+        /* The Main Box (3D/Showcase Area) */
+        .main-box {
+            width: 100%; max-width: 800px; height: 450px;
+            background: var(--glass); border: 1px solid var(--border);
+            border-radius: 24px; position: relative; overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* Icons Grid */
+        .tools-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+            width: 100%; max-width: 600px; margin-top: 60px;
+            
+        }
+        .tools-grid a { text-decoration: none; color: white; }
+
+        .tool-card {
+            background: var(--glass); padding: 20px; border-radius: 15px;
+            text-align: center; border: 1px solid var(--border); transition: 0.3s;
+        }
+
+        .tool-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        
+        .tool-card img { width: 40px; height: 40px; margin-bottom: 10px; filter: grayscale(1); transition: 0.3s; }
+        .tool-card:hover img { filter: grayscale(0); }
+
+        .tool-card h3 { font-size: 0.8rem; font-family: 'Syncopate'; letter-spacing: 1px; }
+
+        /* Hire Button */
+        .hire-btn {
+            margin-top: 50px; padding: 18px 45px; background: var(--accent);
+            color: white; text-decoration: none; font-weight: 700;
+            border-radius: 12px; text-transform: uppercase; letter-spacing: 2px;
+            transition: 0.3s; box-shadow: 0 10px 20px rgba(255, 60, 0, 0.3);
+        }
+
+        .hire-btn:hover { transform: scale(1.05); box-shadow: 0 15px 30px rgba(255, 60, 0, 0.5); }
+
+        @media (max-width: 768px) {
+            .main-box { height: 300px; }
+            .tools-grid { grid-template-columns: 1fr; width: 80%; }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <h1>My Portfolio</h1>
-          
-        </nav>
-    </header>
+    <div class="bg-glow"></div>
 
-    <section id="hero">
-        <h2>Hi, I'm <span>Himanshu</span></h2>
-        <p>Free Games Sugation | Video Editor | Thumbnail Maker</p>
-        <a href="aboutus.html" class="btn">ABOUT ME</a>
-    </section>
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:youremail@gmail.com">himanshuofficial583@gmail.com</a></p>
-    </section>
+    <section>
+        <div class="logo">HIMANSHU</div>
+        <p class="sub-text">Video Editor & Low Level thumbnail Maker</p>
+        <h1>MY<br><span style="color: transparent; -webkit-text-stroke: 1px #fff;">PORTFOLIO</span></h1>
+        
+       <div class="main-box" style="background: #000; border: 2px solid #333; overflow: hidden; border-radius: 20px;">
+    <iframe 
+        src="https://drive.google.com/file/d/19Qbcunn_yS44CdldB5W-K4InKAH5Q9AW/preview" 
+        width="100%" 
+        height="100%" 
+        allow="autoplay" 
+        style="border: none;">
+    </iframe>
+</div>
 
-    <footer>
-        <p>Kindly review the work, and if it meets your expectations, please do not hesitate to get in touch.</p>
-    </footer>
+        <div class="tools-grid">
+            <a href="ae.html">
+            <div class="tool-card">
+                <img src="image/after-effects.png" alt="AE">
+                <h3>After Effects</h3>
+            </div>
+            </a>
+            <a href="vn.html">
+            <div class="tool-card">
+                <img src="image/vietnamm.png" alt="PS">
+                <h3>VN Editor</h3>
+            </div>
+            </a>
+            <a href="ps.html">
+            <div class="tool-card">
+                <img src="https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" alt="PS">
+                <h3>Adobe Photoshop</h3>
+            </div>
+            </a>
+             <a href="clipchamp.html">
+            <div class="tool-card">
+                <img src="image/clipchapm.png" alt="PS">
+                <h3>Microsoft Clipchapm</h3>
+            </div>
+            </a>
+        </div>
+
+        <a href="https://instagram.com/editzhub" class="hire-btn">Work With Me</a>
+    </section>
 
 </body>
 </html>
