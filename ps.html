@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIMANSHU | Photoshop Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #050505; --accent: #ff3c00; --border: rgba(255, 60, 0, 0.2); }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; text-align: center; margin: 0; padding: 40px 20px; }
+        
+        h1 { font-family: 'Syncopate'; font-size: clamp(2rem, 8vw, 4rem); margin-bottom: 10px; color: var(--accent); }
+        .sub-tag { letter-spacing: 5px; color: #555; text-transform: uppercase; margin-bottom: 50px; display: block; }
+
+        /* GALLERY GRID */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .img-card {
+            background: #111;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 10px;
+            transition: 0.4s;
+            overflow: hidden;
+        }
+
+        .img-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 60, 0, 0.2);
+        }
+
+        .img-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .img-title {
+            margin-top: 15px;
+            font-family: 'Syncopate';
+            font-size: 0.7rem;
+            letter-spacing: 1px;
+            color: #aaa;
+        }
+
+        .back-home { display: inline-block; margin-top: 60px; color: #888; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px; border-bottom: 1px solid #333; padding-bottom: 5px; }
+        .back-home:hover { color: var(--accent); border-color: var(--accent); }
+    </style>
+</head>
+<body>
+
+    <p class="sub-tag">Graphic Design Portfolio</p>
+    <h1>PHOTOSHOP</h1>
+
+    <div class="gallery">
+        
+        <div class="img-card">
+            <img src="image/ps01.png" alt="Design 1">
+            <div class="img-title">Thumbnail Design 01</div>
+        </div>
+
+        <div class="img-card">
+            <img src="image/ps02.jpg" alt="Design 2">
+            <div class="img-title">Thumbnail Design 01</div>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-home">← BACK TO HOME</a>
+
+</body>
+</html>
