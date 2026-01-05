@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRICING | HIMANSHU</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #080808;
+            --accent: #ff3c00; 
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+        body { background: var(--bg); color: #fff; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1a100a 0%, transparent 100%);
+            z-index: -1;
+        }
+
+        section { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; }
+
+        .logo { font-family: 'Syncopate'; font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 30px; color: var(--accent); text-align: center; }
+
+        h2 {
+            font-family: 'Syncopate'; font-size: clamp(1.5rem, 5vw, 3rem);
+            text-align: center; line-height: 1.2; margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Pricing Grid */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        .price-card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(10px);
+        }
+
+        .price-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px);
+            background: rgba(255, 60, 0, 0.02);
+        }
+
+        .package-name {
+            font-family: 'Syncopate';
+            font-size: 0.9rem;
+            color: var(--accent);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .cost {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .cost span {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 300;
+        }
+
+        .desc {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            height: 50px;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            font-size: 0.9rem;
+            color: #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .feature-list li::before {
+            content: "→";
+            color: var(--accent);
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .res-tag {
+            font-size: 0.7rem;
+            background: rgba(255,255,255,0.05);
+            padding: 4px 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: inline-block;
+            color: #888;
+        }
+
+        /* Footer Info Box */
+        .info-panel {
+            margin-top: 60px;
+            width: 100%;
+            max-width: 1100px;
+            background: var(--glass);
+            border-left: 4px solid var(--accent);
+            padding: 30px;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .info-panel h3 { font-family: 'Syncopate'; font-size: 0.8rem; margin-bottom: 15px; color: var(--accent); }
+        .info-panel p { font-size: 0.9rem; color: #888; line-height: 1.8; }
+
+        .back-btn {
+            margin-top: 40px;
+            color: #555;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-family: 'Syncopate';
+            transition: 0.3s;
+        }
+        .back-btn:hover { color: var(--accent); }
+
+        @media (max-width: 768px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+
+    <section>
+        <div class="logo">HIMANSHU</div>
+        <h2>PRICING<br><span style="color: transparent; -webkit-text-stroke: 1px #fff;">PACKAGES</span></h2>
+
+        <div class="pricing-grid">
+            <div class="price-card">
+                <div class="package-name">Basic</div>
+                <div class="cost">₹10 <span>/ min</span></div>
+                <p class="desc">Ideal for short clips and quick social posts.</p>
+                <ul class="feature-list">
+                    <li>Basic cuts and trims</li>
+                    <li>Standard background song</li>
+                    <div class="res-tag">360p, 480p, 720p</div>
+                </ul>
+            </div>
+
+            <div class="price-card" style="border-color: rgba(255, 60, 0, 0.3);">
+                <div class="package-name">Standard</div>
+                <div class="cost">₹50 <span>/ min</span></div>
+                <p class="desc">Balanced edits tailored for YouTube & Social Media.</p>
+                <ul class="feature-list">
+                    <li>Polished cuts & trims</li>
+                    <li>Standard song + SFX</li>
+                    <li>Text animations (Fade)</li>
+                    <div class="res-tag">Up to 1080p Full HD</div>
+                </ul>
+            </div>
+
+            <div class="price-card" style="background: rgba(255, 60, 0, 0.05); border-color: var(--accent);">
+                <div class="package-name">Premium</div>
+                <div class="cost">₹100 <span>/ min</span></div>
+                <p class="desc">High-end perfection for branding & music videos.</p>
+                <ul class="feature-list">
+                    <li>Precise beat synchronization</li>
+                    <li>Advanced Sound Design</li>
+                    <li>Any Font + Premium Animation</li>
+                    <li><strong>1 FREE Edit per block of 5</strong></li>
+                    <div class="res-tag">2K / 4K Ultra HD</div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-panel">
+            <h3>Additional Details</h3>
+            <p>
+                • Minor revisions included; major reworks may incur extra charges.<br>
+                • Delivery time depends on project length.<br>
+                • Advance payment recommended; Premium requires advance for 5-video blocks.
+            </p>
+        </div>
+
+        <a href="index.html" class="back-btn">← Back to Portfolio</a>
+    </section>
+
+</body>
+</html>
